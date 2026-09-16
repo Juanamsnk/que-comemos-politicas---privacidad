@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qué Comemos - Política de Privacidad y Términos de Servicio</title>
+    <style>
+        :root {
+            --ink: #1a1a1a;
+            --paper: #f5f5f5;
+            --surface: #2a2a2a;
+            --surface-2: #363636;
+            --line-strong: #4a4a4a;
+            --herb: #8fc46e;
+            --herb-ink: #0f1f0a;
+            --rust: #e2735a;
+            --sky: #5eb3d6;
+            --gold: #f4b860;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--ink);
+            color: var(--paper);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--herb);
+        }
+
+        .logo-box {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, var(--herb), #a8d98e);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--paper);
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: var(--sky);
+            margin-bottom: 4px;
+        }
+
+        .version {
+            font-size: 12px;
+            color: var(--line-strong);
+            margin-top: 8px;
+        }
+
+        /* Tabla de contenidos */
+        .toc {
+            background-color: var(--surface);
+            border-left: 4px solid var(--herb);
+            padding: 24px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+
+        .toc h2 {
+            font-size: 18px;
+            color: var(--herb);
+            margin-bottom: 16px;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: var(--sky);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--herb);
+        }
+
+        /* Secciones */
+        .section {
+            margin-bottom: 45px;
+        }
+
+        h2 {
+            font-size: 26px;
+            font-weight: bold;
+            color: var(--herb);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--line-strong);
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--sky);
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+
+        h4 {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--paper);
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            color: #d0d0d0;
+        }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #d0d0d0;
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--surface);
+            border-left: 4px solid var(--herb);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .card.warning {
+            border-left-color: var(--rust);
+        }
+
+        .card.info {
+            border-left-color: var(--sky);
+        }
+
+        .card p {
+            margin-bottom: 8px;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: var(--surface);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: var(--surface-2);
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            color: var(--herb);
+            border-bottom: 2px solid var(--line-strong);
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid var(--line-strong);
+            color: #d0d0d0;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Contacto */
+        .contact-card {
+            background-color: var(--surface);
+            border-left: 4px solid var(--gold);
+            padding: 24px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .contact-card p {
+            margin-bottom: 8px;
+        }
+
+        .contact-card a {
+            color: var(--sky);
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--line-strong);
+            text-align: center;
+            font-size: 12px;
+            color: var(--line-strong);
+        }
+
+        /* Última actualización */
+        .last-updated {
+            text-align: center;
+            font-size: 12px;
+            color: var(--line-strong);
+            margin-bottom: 30px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 16px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            .logo-box {
+                width: 80px;
+                height: 80px;
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="logo-box">🍽️</div>
+            <h1>Qué Comemos</h1>
+            <p class="subtitle">Política de Privacidad y Términos de Servicio</p>
+            <p class="version">Última actualización: Septiembre 2026</p>
+        </div>
+
+        <p class="last-updated"><strong>Versión 1.0</strong> - Esta política es efectiva a partir de la fecha indicada arriba.</p>
+
+        <!-- TABLA DE CONTENIDOS -->
+        <div class="toc">
+            <h2>📋 Tabla de Contenidos</h2>
+            <ul>
+                <li><a href="#politica-privacidad">Política de Privacidad</a></li>
+                <li><a href="#datos-personales">Datos Personales que Recopilamos</a></li>
+                <li><a href="#uso-datos">Cómo Usamos tus Datos</a></li>
+                <li><a href="#compartir-datos">Compartir Datos con Terceros</a></li>
+                <li><a href="#derechos-usuario">Tus Derechos</a></li>
+                <li><a href="#seguridad">Seguridad de Datos</a></li>
+                <li><a href="#terminos-servicio">Términos de Servicio</a></li>
+                <li><a href="#uso-aceptable">Uso Aceptable</a></li>
+                <li><a href="#limitacion-responsabilidad">Limitación de Responsabilidad</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+
+        <!-- POLÍTICA DE PRIVACIDAD -->
+        <div class="section" id="politica-privacidad">
+            <h2>📱 Política de Privacidad</h2>
+            
+            <p>En <strong>Qué Comemos</strong>, tu privacidad es importante para nosotros. Esta Política de Privacidad explica qué información recopilamos, cómo la usamos, y cuáles son tus derechos respecto a tus datos personales.</p>
+
+            <p>Al usar la aplicación "Qué Comemos", aceptas los términos descritos en esta política. Si no estás de acuerdo con algún aspecto, te recomendamos no usar la aplicación.</p>
+        </div>
+
+        <!-- DATOS PERSONALES -->
+        <div class="section" id="datos-personales">
+            <h2>🔐 Datos Personales que Recopilamos</h2>
+
+            <h3>Información de Autenticación</h3>
+            <p>Para usar la aplicación, debes iniciar sesión con una cuenta de Google. Recopilamos:</p>
+            <ul>
+                <li><strong>Correo electrónico:</strong> Tu email asociado a tu cuenta de Google</li>
+                <li><strong>Identificador único (UID):</strong> Generado por Firebase para identificarte de forma única</li>
+                <li><strong>Nombre de perfil:</strong> Opcional, si incluiste en tu cuenta de Google</li>
+                <li><strong>Foto de perfil:</strong> Opcional, si está configurada en tu cuenta de Google</li>
+            </ul>
+
+            <h3>Datos de Comidas (Meal Plan)</h3>
+            <p>Recopilamos información que tú proporcionas voluntariamente:</p>
+            <ul>
+                <li><strong>Comidas planeadas:</strong> Nombres de platos, desayunos, almuerzos y cenas que planificas</li>
+                <li><strong>Recordatorios:</strong> Fechas, horas y títulos de tus recordatorios de comidas</li>
+                <li><strong>Historial:</strong> Cambios en tus planes de comidas a lo largo del tiempo</li>
+            </ul>
+
+            <h3>Datos de Calendarios Compartidos</h3>
+            <p>Si compartes tu calendario con otros usuarios:</p>
+            <ul>
+                <li><strong>IDs de calendario:</strong> Identificadores de calendarios compartidos</li>
+                <li><strong>Información compartida:</strong> Tus planes de comidas serán visibles para usuarios con acceso</li>
+                <li><strong>Quién puede acceder:</strong> Guardamos referencias a usuarios con los que compartiste</li>
+            </ul>
+
+            <h3>Datos de Dispositivo y Uso</h3>
+            <ul>
+                <li><strong>Tipo de dispositivo:</strong> Modelo, versión de Android</li>
+                <li><strong>Identificador de instalación:</strong> Para rastrear la app en tu dispositivo</li>
+                <li><strong>Registros de acceso:</strong> Cuándo y cómo usas la aplicación</li>
+                <li><strong>Datos de crash:</strong> Información sobre errores para mejorar la app</li>
+            </ul>
+
+            <div class="card info">
+                <h4>ℹ️ Información importante</h4>
+                <p>No compartimos automáticamente datos de tus comidas con tus contactos de Google ni con la comunidad. Solo compartimos si expresamente eliges hacerlo a través de la función "Compartir calendario".</p>
+            </div>
+        </div>
+
+        <!-- USO DE DATOS -->
+        <div class="section" id="uso-datos">
+            <h2>🎯 Cómo Usamos tus Datos</h2>
+
+            <table>
+                <tr>
+                    <th>Tipo de Dato</th>
+                    <th>Propósito</th>
+                </tr>
+                <tr>
+                    <td>Correo y UID</td>
+                    <td>Autenticación, identificación única, recuperación de cuenta</td>
+                </tr>
+                <tr>
+                    <td>Datos de comidas</td>
+                    <td>Sincronización entre dispositivos, permitir planificación personal</td>
+                </tr>
+                <tr>
+                    <td>Recordatorios</td>
+                    <td>Programar notificaciones locales en tu dispositivo</td>
+                </tr>
+                <tr>
+                    <td>Calendarios compartidos</td>
+                    <td>Permitir que otros usuarios vean tus planes (si lo autorizas)</td>
+                </tr>
+                <tr>
+                    <td>Datos de uso</td>
+                    <td>Análisis, mejora de la app, detección de errores</td>
+                </tr>
+                <tr>
+                    <td>Datos de dispositivo</td>
+                    <td>Optimización de rendimiento, compatibilidad</td>
+                </tr>
+            </table>
+
+            <h3>Uso Específico de Datos</h3>
+            <ul>
+                <li><strong>Sincronización en tiempo real:</strong> Tus datos se guardan en Firebase Realtime Database para que puedas acceder desde varios dispositivos</li>
+                <li><strong>Notificaciones:</strong> Usamos tus recordatorios para programar notificaciones locales en tu dispositivo Android</li>
+                <li><strong>Mejora de servicios:</strong> Analizamos patrones de uso (de forma anónima) para mejorar la experiencia</li>
+                <li><strong>Soporte técnico:</strong> Si contactas con nosotros, guardamos tu comunicación para resolver tu problema</li>
+            </ul>
+        </div>
+
+        <!-- COMPARTIR DATOS -->
+        <div class="section" id="compartir-datos">
+            <h2>🤝 Compartir Datos con Terceros</h2>
+
+            <h3>Terceros que acceden a tus datos:</h3>
+
+            <h4>Google (Autenticación)</h4>
+            <p>Usamos Google Sign-In para autenticarte. Google recibe información según su <a href="https://policies.google.com/privacy" target="_blank" style="color: var(--sky);">Política de Privacidad</a>.</p>
+
+            <h4>Firebase (Google Cloud)</h4>
+            <p>Tus datos se almacenan en Firebase Realtime Database (propiedad de Google). Están protegidos según las políticas de seguridad de Google Cloud.</p>
+
+            <h4>NO compartimos con otros terceros</h4>
+            <p>No vendemos, alquilamos ni compartimos tus datos personales con terceras empresas publicitarias, de marketing o análisis sin tu consentimiento explícito.</p>
+
+            <h3>Cumplimiento legal</h3>
+            <p>Podemos divulgar información si así lo requiere la ley, una orden judicial o una solicitud de autoridades gubernamentales.</p>
+
+            <div class="card warning">
+                <h4>⚠️ Datos compartidos voluntariamente</h4>
+                <p>Si compartes tu calendario con otro usuario, ese usuario verá tus planes de comidas. Eres responsable de elegir a quién le das acceso.</p>
+            </div>
+        </div>
+
+        <!-- DERECHOS DEL USUARIO -->
+        <div class="section" id="derechos-usuario">
+            <h2>⚖️ Tus Derechos</h2>
+
+            <h3>Derechos que tienes:</h3>
+            <ul>
+                <li><strong>Derecho de acceso:</strong> Puedes solicitar una copia de los datos personales que tenemos</li>
+                <li><strong>Derecho de rectificación:</strong> Puedes actualizar o corregir información incorrecta</li>
+                <li><strong>Derecho de eliminación:</strong> Puedes solicitar que borremos tus datos (con ciertas excepciones legales)</li>
+                <li><strong>Derecho de portabilidad:</strong> Puedes solicitar tus datos en un formato transferible</li>
+                <li><strong>Derecho a oponerme:</strong> Puedes oponerte al procesamiento de tus datos en ciertos casos</li>
+                <li><strong>Derecho a revocar consentimiento:</strong> Puedes retirar tu consentimiento en cualquier momento</li>
+            </ul>
+
+            <h3>Cómo ejercer tus derechos:</h3>
+            <p>Contacta a nuestro equipo en la sección de <a href="#contacto" style="color: var(--sky);">Contacto</a>. Responderemos en un plazo de 30 días hábiles.</p>
+
+            <h3>Eliminación de cuenta</h3>
+            <p>Si deseas eliminar tu cuenta completamente:</p>
+            <ol>
+                <li>Abre la app y ve al menú hamburguesa</li>
+                <li>Selecciona "Cerrar sesión"</li>
+                <li>Contacta a nuestro equipo de soporte solicitando la eliminación completa de datos</li>
+                <li>Tus datos serán eliminados de nuestros servidores en un plazo de 30 días</li>
+            </ol>
+
+            <div class="card info">
+                <h4>ℹ️ Nota sobre RGPD</h4>
+                <p>Si eres residente de la UE, tienes derechos adicionales bajo el Reglamento General de Protección de Datos (RGPD). Consulta nuestros términos específicos de RGPD o contacta con nosotros.</p>
+            </div>
+        </div>
+
+        <!-- SEGURIDAD -->
+        <div class="section" id="seguridad">
+            <h2>🔒 Seguridad de Datos</h2>
+
+            <h3>Medidas de seguridad implementadas:</h3>
+            <ul>
+                <li><strong>Encriptación en tránsito (HTTPS/TLS):</strong> Todos los datos se transmiten de forma cifrada</li>
+                <li><strong>Autenticación Firebase:</strong> Tus credenciales son manejadas por Firebase, no almacenamos contraseñas</li>
+                <li><strong>Reglas de seguridad:</strong> Firebase Realtime Database tiene reglas de seguridad que protegen tus datos</li>
+                <li><strong>Acceso limitado:</strong> Solo tú y usuarios explícitamente autorizados pueden acceder a tus datos</li>
+                <li><strong>Auditoría regular:</strong> Revisamos regularmente nuestra seguridad y prácticas</li>
+            </ul>
+
+            <h3>Seguridad de notificaciones</h3>
+            <p>Las notificaciones son locales y se almacenan en tu dispositivo Android. No se transmiten a servidores externos.</p>
+
+            <div class="card warning">
+                <h4>⚠️ Responsabilidad del usuario</h4>
+                <p>Aunque implementamos medidas robustas, ningún sistema es 100% seguro. Eres responsable de mantener tu contraseña de Google segura y de no compartir tu dispositivo con personas no autorizadas.</p>
+            </div>
+        </div>
+
+        <!-- TÉRMINOS DE SERVICIO -->
+        <div class="section" id="terminos-servicio">
+            <h2>📜 Términos de Servicio</h2>
+
+            <h3>Aceptación de términos</h3>
+            <p>Al descargar, instalar y usar "Qué Comemos", aceptas estar vinculado por estos Términos de Servicio. Si no aceptas, no debes usar la aplicación.</p>
+
+            <h3>Licencia de uso</h3>
+            <p>Te otorgamos una licencia limitada, no exclusiva, revocable y no transferible para usar esta aplicación con fines personales y no comerciales. La aplicación y su contenido son propiedad nuestra o de nuestros licenciantes.</p>
+
+            <h3>Restricciones de uso</h3>
+            <p>Al usar la aplicación, no debes:</p>
+            <ul>
+                <li>Usar la app para actividades ilegales o fraudulentas</li>
+                <li>Intentar acceder a datos de otros usuarios sin autorización</li>
+                <li>Modificar, adaptarte o traducir la app</li>
+                <li>Crear herramientas automatizadas para interactuar con la app (bots, scrapers)</li>
+                <li>Distribuir spam o contenido ofensivo a través de la app</li>
+                <li>Intentar derribar o interferir con los servidores o servicios de la app</li>
+            </ul>
+        </div>
+
+        <!-- USO ACEPTABLE -->
+        <div class="section" id="uso-aceptable">
+            <h2>✅ Uso Aceptable</h2>
+
+            <h3>Contenido aceptable</h3>
+            <p>Los datos y contenido que cargues en la aplicación deben:</p>
+            <ul>
+                <li>Ser legales y no violar leyes locales, nacionales o internacionales</li>
+                <li>No contener material ofensivo, discriminatorio o de odio</li>
+                <li>No violar derechos de terceros (propiedad intelectual, privacidad)</li>
+                <li>No incluir malware, virus o código malicioso</li>
+            </ul>
+
+            <h3>Comportamiento esperado</h3>
+            <ul>
+                <li>Tratar a otros usuarios con respeto</li>
+                <li>No compartir información de otros sin consentimiento</li>
+                <li>Usar la app de forma ética y responsable</li>
+            </ul>
+
+            <h3>Suspensión de cuenta</h3>
+            <p>Nos reservamos el derecho a suspender o eliminar tu cuenta si violas estos términos, sin previo aviso en caso de violación grave.</p>
+        </div>
+
+        <!-- LIMITACIÓN DE RESPONSABILIDAD -->
+        <div class="section" id="limitacion-responsabilidad">
+            <h2>⚡ Limitación de Responsabilidad</h2>
+
+            <h3>La app se proporciona "tal como está"</h3>
+            <p>La aplicación se proporciona "TAL COMO ESTÁ" sin garantías de ningún tipo, ya sean expresas o implícitas. No garantizamos que:</p>
+            <ul>
+                <li>La app funcione sin interrupciones o errores</li>
+                <li>La app sea adecuada para tus propósitos específicos</li>
+                <li>Los datos se recuperarán en caso de pérdida</li>
+                <li>La app sea compatible con todos los dispositivos Android</li>
+            </ul>
+
+            <h3>Limitación de daños</h3>
+            <p>En ningún caso seremos responsables de daños indirectos, incidentales, especiales o consecuentes derivados del uso o incapacidad de usar la aplicación, incluso si hemos sido advertidos de la posibilidad de tales daños.</p>
+
+            <h3>Responsabilidad limitada</h3>
+            <p>Nuestra responsabilidad total con respecto a la aplicación no excederá el monto que pagaste por ella (o $0 si la descargaste gratuitamente).</p>
+
+            <h3>Respaldo de datos</h3>
+            <p>Es tu responsabilidad hacer respaldos de tus datos importantes. No somos responsables de pérdidas de datos, aunque implementamos medidas para prevenirlas.</p>
+
+            <div class="card warning">
+                <h4>⚠️ Uso bajo tu propio riesgo</h4>
+                <p>Usas la aplicación bajo tu propio riesgo. Aunque confiamos en nuestra seguridad, recomendamos que hagas respaldos de datos críticos.</p>
+            </div>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="section" id="contacto">
+            <h2>📧 Contacto</h2>
+
+            <p>Si tienes preguntas, inquietudes o solicitudes relacionadas con esta Política de Privacidad, Términos de Servicio, o tu cuenta, contáctanos:</p>
+
+            <div class="contact-card">
+                <h4>Información de Contacto</h4>
+                <p><strong>Correo electrónico:</strong> <a href="mailto:privacy@quecomemos.app">privacy@quecomemos.app</a></p>
+                <p><strong>Soporte técnico:</strong> <a href="mailto:support@quecomemos.app">support@quecomemos.app</a></p>
+                <p><strong>Sitio web:</strong> <a href="https://www.quecomemos.app" target="_blank">https://www.quecomemos.app</a></p>
+                <p><strong>Tiempo de respuesta:</strong> Respondemos en un plazo de 5-7 días hábiles</p>
+            </div>
+
+            <h3>Solicitudes de Privacidad (RGPD, CCPA)</h3>
+            <p>Para solicitudes de acceso, eliminación o portabilidad de datos, por favor incluye:</p>
+            <ul>
+                <li>Tu correo electrónico registrado</li>
+                <li>Descripción clara de tu solicitud</li>
+                <li>Cualquier documento de identificación si se requiere</li>
+            </ul>
+
+            <p>Procesaremos tu solicitud de acuerdo con las leyes de privacidad aplicables.</p>
+        </div>
+
+        <!-- CAMBIOS EN LA POLÍTICA -->
+        <div class="section">
+            <h2>📝 Cambios en esta Política</h2>
+
+            <p>Podemos actualizar esta Política de Privacidad y Términos de Servicio en cualquier momento. Los cambios entrarán en vigor cuando actualicemos esta página.</p>
+
+            <p><strong>Tu uso continuado de la aplicación después de cambios</strong> significa que aceptas los términos revisados.</p>
+
+            <table>
+                <tr>
+                    <th>Versión</th>
+                    <th>Fecha</th>
+                    <th>Cambios principales</th>
+                </tr>
+                <tr>
+                    <td>1.0</td>
+                    <td>Septiembre 2026</td>
+                    <td>Versión inicial de política</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- OTROS TÉRMINOS -->
+        <div class="section">
+            <h2>⚙️ Otros Términos Importantes</h2>
+
+            <h3>Vinculación a sitios de terceros</h3>
+            <p>La aplicación puede contener enlaces a sitios web de terceros. No somos responsables del contenido, políticas de privacidad o prácticas de sitios externos.</p>
+
+            <h3>Ley aplicable</h3>
+            <p>Esta Política de Privacidad y Términos de Servicio se rigen por las leyes de la jurisdicción donde está registrada la empresa desarrolladora, sin perjuicio de las leyes de privacidad aplicables (como RGPD para usuarios en la UE).</p>
+
+            <h3>Resolución de disputas</h3>
+            <p>Si tienes una disputa con nosotros, te invitamos a contactarnos primero para resolverla de manera informal.</p>
+
+            <h3>Severabilidad</h3>
+            <p>Si cualquier parte de estos términos es considerada inválida o inaplicable, las disposiciones restantes continuarán en vigor.</p>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p><strong>Qué Comemos</strong></p>
+            <p>Política de Privacidad y Términos de Servicio v1.0</p>
+            <p>Última actualización: Septiembre 2026</p>
+            <p>© 2026 Qué Comemos. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>
